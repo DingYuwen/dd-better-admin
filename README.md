@@ -1,5 +1,6 @@
 ## 项目说明
-项目使用*soybean-admin*， 用来学习ts, vite, vue3
+
+项目使用*soybean-admin*， 用来学习 ts, vite, vue3
 
 ## 目录说明
 
@@ -234,31 +235,31 @@ pnpm i -g commitizen
 
 ```
 
-```js
+```bash
 {
-  // 本地运行(dev环境)
+  # 本地运行(dev环境)
   "dev": "cross-env VITE_ENV_TYPE=dev vite",
-  // 本地运行(test环境)
+  # 本地运行(test环境)
   "dev:test": "cross-env VITE_HTTP_ENV=test vite",
-  // 本地运行(prod环境)
+  # 本地运行(prod环境)
   "dev:prod": "cross-env VITE_HTTP_ENV=prod vite",
-  // 构建打包(prod环境)
+  # 构建打包(prod环境)
   "build": "npm run typecheck && cross-env VITE_HTTP_ENV=prod vite build",
-  // 构建打包(dev环境)
+  # 构建打包(dev环境)
   "build:dev": "npm run typecheck && cross-env VITE_HTTP_ENV=dev vite build",
-  // 构建打包(test环境)
+  # 构建打包(test环境)
   "build:test": "npm run typecheck && cross-env VITE_HTTP_ENV=test vite build",
-  // 构建打包(部署vercel)
+  # 构建打包(部署vercel)
   "build:vercel": "cross-env VITE_HASH_ROUTE=true vite build",
-  // 本地环境预览构建后的dist
+  # 本地环境预览构建后的dist
   "preview": "vite preview",
-  // vue文件的ts检查
+  # vue文件的ts检查
   "typecheck": "vue-tsc --noEmit --skipLibCheck",
-  // 检测代码是否符合eslint规范并自动修复
+  # 检测代码是否符合eslint规范并自动修复
   "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
-  // 初始化husky
+  # 初始化husky
   "prepare": "husky install",
-  // 记录对某个node_modules依赖包的修改
+  # 记录对某个node_modules依赖包的修改
   "postinstall": "patch-package"
 }
 ```

@@ -1,9 +1,17 @@
+/*
+ * @Author: dingyuwen ding_yuwen@163.com
+ * @Date: 2022-10-14 23:03:26
+ * @LastEditTime: 2022-11-18 19:04:55
+ * @LastEditors: dingyuwen
+ * @Description:
+ */
 import { defineConfig } from '@unocss/vite';
 import presetUno from '@unocss/preset-uno';
+import presetAttributify from '@unocss/preset-attributify';
 
 export default defineConfig({
   exclude: ['node_modules', 'dist', '.git', '.husky', '.vscode', 'public', 'build', 'mock', './stats.html'],
-  presets: [presetUno({ dark: 'class' })],
+  presets: [presetAttributify(), presetUno({ dark: 'class' })],
   shortcuts: {
     'wh-full': 'w-full h-full',
     'flex-center': 'flex justify-center items-center',
